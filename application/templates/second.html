@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AWS CLOUD</title>
+  <link rel="stylesheet" href="static/css/second.css"/>
+</head>
+<body>
+
+<div class="container">  
+  <form id="contact" action="" method="post">   
+    <h3><b>Specify Stack Details<b></h3>
+    <h3>Stack name</h3>
+    <fieldset>
+      <h4>Stack name</h4>
+      <input placeholder="stack name" type="text" tabindex="1" required autofocus>
+      <h5>stack name can include (A-Z & a-z), numbers(0-9),& dashes(-)</h5>
+    </fieldset>
+    <h3>Parametes</h3>
+    <h5>( Parameters are defined in your template and allow you to input custom values when you create or update a stack ) </h5>
+    <fieldset>
+      <h4>DBName</h4>
+      <input placeholder="Database name" type="text" tabindex="3" required>
+      <h5>The Wordpress Databse name</h5>
+    </fieldset>
+    <fieldset>
+      <h4>DBPassword</h4>
+      <input placeholder="Database password" type="password" tabindex="3" required>
+      <h5>Password for MySql database</h5>
+    </fieldset>
+    <fieldset>
+      <h4>DBRootPassword</h4>
+      <input placeholder="Database root password" type="password" tabindex="3" required>
+      <h5>Root password for MySql</h5>
+    </fieldset>
+    <fieldset>
+      <h4>DBUser</h4>
+      <input placeholder="Database user" type="text" tabindex="3" required>
+      <h5>The Wordpress Databse admin account name</h5>
+    </fieldset>
+
+    <fieldset>
+      <h4>InstanceType</h4>
+      <select id="instance" name="instance">
+        <option value="t1micro">t1.micro</option>
+        <option value="t2nano">t2.nano</option>
+        <option value="t2micro">t2.micro</option>
+        <option value="t2small">t2.small</option>
+        <option value="t2medium">t2.medium</option>
+        <option value="t2large">t2.large</option>
+      </select>
+      <h5>WebServer EC2 Instance type</h5>
+    </fieldset>
+
+    <fieldset>
+      <h4>KeyName</h4>
+      <input type="text" value="test1" readonly>
+      <h5>Name of an existing EC2 KeyPair to enable SSH access to the instances</h5>
+    </fieldset>
+
+    <fieldset>
+      <h4>SSHLocation</h4>
+      <input  type="text" tabindex="3" value="0.0.0.0/0">
+      <h5>The IP addess range that can be  to SSH to the EC2 Instances</h5>
+    </fieldset>
+
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Create Stack</button>
+    </fieldset>
+    
+</div>
+</body>
+</html>
